@@ -1,0 +1,170 @@
+.filter-wrapper {
+    @include container-base;
+    flex-wrap: wrap;
+
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: $filter-divider-color;
+    }
+
+    & select {
+        @include filter-block;
+        cursor: pointer;
+        font-size: $filter-font-size-base;
+        border-color: transparent;
+        color: $text-color;
+        background-color: $filter-bg;
+
+        &:has(option:checked[disabled]) {
+            color: $filter-text-color;
+        }
+
+        &:hover {
+            box-shadow: $filter-hover-shadow;
+        }
+
+        &:focus-visible {
+            outline: $filter-focus-outline-width solid $filter-accent;
+            outline-offset: $filter-focus-outline-offset;
+            box-shadow: $filter-focus-shadow;
+        }
+    }
+    
+    .filter-price {
+        display: flex;
+        align-items: center;
+        border-radius: $filter-pill-radius;
+        background-color: $filter-accent-soft;
+
+        & input {
+            @include filter-block;
+            width: 120px;
+            padding-inline: 15px;
+
+            font-size: $filter-font-size-base;
+            border-radius: $filter-pill-radius;
+            border-color: transparent;
+            color: $text-color;
+
+            &::placeholder {
+                color: $filter-text-color;
+            }
+
+            &:focus-visible {
+                outline: $filter-focus-outline-width solid $filter-accent;
+                outline-offset: 0;
+                box-shadow: $filter-focus-shadow;
+            }
+        }
+
+        .price-separator {
+            color: $filter-text-color;
+            font-size: $filter-font-size-base;
+        }
+    }
+
+    .filter-search-input {
+        @include filter-block;
+        width: 35%;
+
+        display: flex;
+        align-items: center;
+
+        font-size: $filter-font-size-base;
+        border-color: transparent;
+        background-color: $filter-bg;
+
+        &:hover {
+            box-shadow: $filter-hover-shadow;
+        }
+
+        &:focus-within {
+            outline: $filter-focus-outline-width solid $filter-accent;
+            outline-offset: $filter-focus-outline-offset;
+            box-shadow: $filter-focus-shadow;
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+
+            font-size: $filter-font-size-base;
+            color: $text-color;
+
+            &::placeholder {
+                color: $filter-text-color;
+            }
+        }
+    }
+
+    button {
+        @include filter-block;
+        cursor: pointer;
+        padding-inline: 24px;
+        border-radius: $filter-pill-radius;
+        border: none;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        font-size: $filter-font-size-base;
+    }
+
+    .search-button {
+        background-color: $filter-accent;
+        color: $filter-bg;
+
+        &:hover {
+            background-color: $filter-accent-strong;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        &:active {
+            color: $filter-accent-strong;
+            background-color: $filter-bg;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+        }
+
+        &:focus-visible {
+            outline: $filter-focus-outline-width solid $filter-accent;
+            outline-offset: $filter-focus-outline-offset;
+        }
+    }
+
+    .reset-button {
+        background-color: $filter-bg;
+        color: $text-color;
+        border: 1px solid #d0d0d0;
+        box-shadow: none;
+
+        &:hover {
+            background-color: #f3f4f6;
+            box-shadow: none;
+        }
+
+        &:active {
+            background-color: $filter-divider-color;
+            color: $text-color;
+            box-shadow: none;
+        }
+
+        &:focus-visible {
+            outline: $filter-focus-outline-width solid $filter-accent;
+            outline-offset: $filter-focus-outline-offset;
+        }
+    }
+
+    .filter-sort {
+        border-radius: 8px;
+        background-color: $filter-accent-soft;
+    }
+}

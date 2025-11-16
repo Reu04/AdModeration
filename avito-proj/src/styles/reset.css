@@ -1,0 +1,66 @@
+/* Убираем отступы и поля для всех элементов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Устанавливаем базовый шрифт для всех элементов */
+html {
+  font-size: 100%; /* 16px по умолчанию */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Устраняет масштабирование шрифта на iOS */
+}
+
+/* Убираем стандартный стиль для списка */
+ul, ol {
+  list-style: none;
+}
+
+/* Убираем текстовое оформление ссылок */
+a {
+  text-decoration: none;
+  color: inherit; /* Наследуем цвет от родителя */
+}
+
+/* Убираем рамки и стили кнопок */
+button, input, textarea, select {
+  font: inherit; /* Наследуем шрифт */
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Убираем рамки для изображений */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Убираем стили таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Убираем стили цитат */
+blockquote, q {
+  quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: '';
+}
+
+/* Устанавливаем нулевые стили для контейнеров форм */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Для элементов с поддержкой скрытия */
+[hidden] {
+  display: none;
+}

@@ -1,0 +1,28 @@
+.main-nav {
+    max-width: 800px;
+    width: 70vw;
+    margin: 16px auto 0;
+    padding: 0 20px 8px;
+    box-sizing: border-box;
+
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    border-bottom: 1px solid #e5e7eb;
+    font-family: 'Noto Sans Mono';
+
+    a {
+        font-size: 14px;
+        color: $filter-text-color;
+        text-decoration: none;
+        padding: 6px 10px;
+        border-radius: 999px;
+        transition: background-color 0.15s ease, color 0.15s ease;
+
+        &:hover {
+            background-color: $filter-accent-soft;
+            color: $text-color;
+        }
+    }
+}

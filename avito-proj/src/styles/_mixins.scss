@@ -1,0 +1,26 @@
+@mixin filter-block {
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+
+    border: $filter-border-style;
+    border-radius: 8px;
+    box-shadow: $filter-box-shadow-style;
+    background-color: $filter-bg;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+@mixin container-base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 800px;
+    width: 70vw;
+    margin: 20px auto;
+    padding: 0px 20px;
+    gap: 8px;
+    box-sizing: border-box;
+
+    font-family: 'Noto Sans Mono';
+}
