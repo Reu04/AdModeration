@@ -10,11 +10,11 @@ git clone https://github.com/Reu04/AdModeration.git
 cd AdModeration
 ```
 ### 2. Запуск сервера (backend)
-```cd avito-proj-server```
-
-```npm install```
-
-```npm start```
+```
+cd avito-proj-server
+npm install
+npm start
+```
 
 Сервер будет доступен по адресу:
 `http://localhost:3000`
@@ -23,11 +23,11 @@ cd AdModeration
 
 В новом терминале:
 
-```cd avito-proj```
-
-```npm install```
-
-```npm run dev```
+```
+cd avito-proj
+npm install
+npm run dev
+```
 
 Проект будет доступен по адресу:
 `http://localhost:5173`
